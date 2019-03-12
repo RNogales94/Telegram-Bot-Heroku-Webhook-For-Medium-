@@ -4,7 +4,7 @@ from bottle import (
     run, post, response, request as bottle_request
 )
 
-BOT_URL = f'https://api.telegram.org/bot{os.environ['BOT_KEY']}/' # <--- add your telegram token as environment variable in your system
+BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/' # <--- add your telegram token as environment variable in your system
 
 
 def get_chat_id(data):  
