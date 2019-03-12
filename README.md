@@ -8,6 +8,9 @@ Y crearle un webhook se hace así:
 
 https://api.telegram.org/bot<BOT_TOKEN>/setWebHook?url=<TU_URL_DE_HEROKU>
 
+![](set_webhook.png)
+
+
 Estoy dando por hecho que lo vas a desplegar en heroku, pero puedes desplegarlo donde quieras, si lo despliegas en Heroku ya estaría listo (para eso sirve el procfile)
 
 Solo tendras que añadir tu BOT_TOKEN a una variable de entorno en heroku (en el dashboard de heroku)
