@@ -12,4 +12,4 @@ Estoy dando por hecho que lo vas a desplegar en heroku, pero puedes desplegarlo 
 
 Solo tendras que añadir tu BOT_TOKEN a una variable de entorno en heroku (en el dashboard de heroku)
 
-![](./images/add_environ.png)
+![](Captura de pantalla de 2019-03-12 21-56-07.png)
