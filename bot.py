@@ -56,4 +56,4 @@ def main():
     return response  # status 200 OK by default
 
 if __name__ == '__main__':  
-    run(host='localhost', port=8080, debug=True)
+    run(host='0.0.0.0', port=port = int(os.environ.get('PORT', 5000)), debug=True)
