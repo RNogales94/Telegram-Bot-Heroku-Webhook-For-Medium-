@@ -1,8 +1,6 @@
 import requests  
 import os
-from bottle import (  
-    run, post, response, request as bottle_request
-)
+from flask import Flask
 
 BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/' # <--- add your telegram token as environment variable in your system
 
@@ -46,14 +44,20 @@ def prepare_data_for_answer(data):
 
     return json_data
 
-@post('/')
+
+app = Flask(__name__)
+
+
+@app.route('/', methods=['POST'])
 def main():  
-    data = bottle_request.json
+    data = requests.json
+    # I recommend you to see this data in the debugger
 
     answer_data = prepare_data_for_answer(data)
     send_message(answer_data)
 
-    return response  # status 200 OK by default
+    return ''  # status 200 OK by default
+
 
 if __name__ == '__main__':  
-    run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
